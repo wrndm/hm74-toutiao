@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import ELEMENT from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ELEMENT)
 Vue.config.productionTip = false
 
 // 职责1：导入项目需要依赖的资源(包 css ...)
