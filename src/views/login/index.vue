@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
 export default {
   data () {
     // 校验手机号
@@ -37,8 +38,8 @@ export default {
     return {
       // 表单数据
       loginForm: {
-        moblie: '',
-        code: ''
+        moblie: '15534116019',
+        code: '246810'
 
       },
       //   表单验证规则对象
@@ -70,7 +71,13 @@ export default {
             //   res是响应对象 包含后台返回的数据res.data
             // console.log(res.data)
             // 1：跳转到首页
-            // 2：保存用户的信息，用来判断登录状态
+            // TODO 2：保存用户的信息，用来判断登录状态
+          // sessionStorage BOM对象，全局对象作用是保存数据，是有有效期的，当你关闭浏览器就失效
+          // sessionStorage.setItem(key,value) value必须是字符串 设置数据/存储数据
+          // sessionStorage.getItem(key)获取数据
+          // sessionStorage.removeItem(key)删除数据
+          // sessionStorage.clear()清空所有数据
+            window.sessionStorage.setItem('hm74', JSON.stringify(res.data.data))
             this.$router.push('/')
           })
             .catch(() => {
